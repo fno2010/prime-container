@@ -5,7 +5,7 @@ ARG PRIME_REPO="git@github.com:PrimeIntellect-ai/prime.git"
 ADD requirements.txt /opt/prime-requirements.txt
 
 RUN apt update -y && \
-    apt install iperf -y && \
+    apt install iperf git -y && \
     git clone ${PRIME_REPO} /opt/prime && \
     cd /opt/prime && \
     git submodule update --init --recursive && \

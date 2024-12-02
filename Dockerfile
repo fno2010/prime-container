@@ -1,6 +1,6 @@
 FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
 
-ARG PRIME_REPO="git@github.com:PrimeIntellect-ai/prime.git"
+ARG PRIME_REPO="https://github.com/PrimeIntellect-ai/prime"
 
 ADD requirements.txt /opt/prime-requirements.txt
 

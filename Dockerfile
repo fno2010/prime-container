@@ -10,7 +10,9 @@ RUN apt update -y && \
     cd /opt/prime && \
     git submodule update --init --recursive && \
     pip install --no-cache-dir -r /opt/prime-requirements.txt && \
-    pip install --no-cache-dir flash-attn --no-build-isolation && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Installing flash-attn requires CUDA development environment (nvcc)
+# Drop this to user machine
+## RUN pip install --no-cache-dir flash-attn --no-build-isolation
